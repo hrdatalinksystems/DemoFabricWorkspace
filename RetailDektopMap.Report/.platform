@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "RetailDektopMap"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "5a887c19-ce3e-b2c6-411e-11aa07b1c9fb"
+  }
+}

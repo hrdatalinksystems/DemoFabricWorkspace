@@ -1,0 +1,44 @@
+table Geography
+	lineageTag: 50e1439f-c798-40f2-98c6-1be87e3a5c20
+	sourceLineageTag: [dbo].[Geography]
+
+	column CityId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 2843f9cb-f3b5-4861-8636-f6d5984d154a
+		sourceLineageTag: CityId
+		summarizeBy: none
+		sourceColumn: CityId
+
+		annotation SummarizationSetBy = Automatic
+
+	column City
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 06970a13-b484-4629-b12d-d6870f38f433
+		sourceLineageTag: City
+		summarizeBy: none
+		sourceColumn: City
+
+		annotation SummarizationSetBy = Automatic
+
+	column State
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 1f99c1b2-b3bb-459b-b33c-b915dfef7c81
+		sourceLineageTag: State
+		summarizeBy: none
+		sourceColumn: State
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Geography = entity
+		mode: directLake
+		source
+			entityName: Geography
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

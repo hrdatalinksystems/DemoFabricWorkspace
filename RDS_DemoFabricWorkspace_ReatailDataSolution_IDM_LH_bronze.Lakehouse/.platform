@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Lakehouse",
+    "displayName": "RDS_DemoFabricWorkspace_ReatailDataSolution_IDM_LH_bronze"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "828f9d60-1a4e-9230-4694-8e29391eb412"
+  }
+}

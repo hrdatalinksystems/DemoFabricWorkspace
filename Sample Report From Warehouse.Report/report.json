@@ -1,0 +1,42 @@
+{
+  "config": "{\"version\":\"5.59\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY24SU10\",\"version\":\"5.61\",\"type\":2}},\"activeSectionIndex\":0,\"modelExtensions\":[{\"name\":\"extension\",\"entities\":[{\"name\":\"Sales\",\"extends\":\"Sales\",\"measures\":[{\"name\":\"Discount\",\"dataType\":3,\"expression\":\"SUM(Sales[DiscountAmount])\",\"errorMessage\":null,\"hidden\":false,\"formulaOverride\":null,\"formatInformation\":{\"formatString\":\"0.00\",\"format\":\"NumberDecimal\",\"accuracy\":2,\"thousandSeparator\":false,\"currencyFormat\":null,\"dateTimeCustomFormat\":null}}]}]}],\"defaultDrillFilterOtherVisuals\":true,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"useEnhancedTooltips\":true,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY24SU10",
+            "path": "BaseThemes/CY24SU10.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "Page 1",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "e21f5dcc50dde41eb507",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"fce6e9e10c70b3130a10\",\"layouts\":[{\"id\":0,\"position\":{\"x\":260.61415220293725,\"y\":131.58878504672896,\"z\":0,\"width\":657.9439252336448,\"height\":416.128170894526,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"Item.Brand\"},{\"queryRef\":\"Sales.Gross\"},{\"queryRef\":\"Sales.Discount\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"i\",\"Entity\":\"Item\",\"Type\":0},{\"Name\":\"s\",\"Entity\":\"Sales\",\"Type\":0},{\"Name\":\"s1\",\"Entity\":\"Sales\",\"Schema\":\"extension\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"i\"}},\"Property\":\"Brand\"},\"Name\":\"Item.Brand\",\"NativeReferenceName\":\"Brand\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Gross\"},\"Name\":\"Sales.Gross\",\"NativeReferenceName\":\"Gross\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s1\"}},\"Property\":\"Discount\"},\"Name\":\"Sales.Discount\",\"NativeReferenceName\":\"Discount\"}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 416.13,
+          "width": 657.94,
+          "x": 260.61,
+          "y": 131.59,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}

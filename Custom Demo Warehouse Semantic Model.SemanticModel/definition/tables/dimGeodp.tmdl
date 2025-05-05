@@ -1,0 +1,47 @@
+table dimGeodp
+	lineageTag: 780bf4f8-f332-41f8-ae06-3f4fb427e029
+	sourceLineageTag: [dbo].[dimGeodp]
+
+	column city
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: aa3c4363-63f3-44f3-ac0c-f17a8481add1
+		sourceLineageTag: city
+		summarizeBy: none
+		sourceColumn: city
+
+		annotation SummarizationSetBy = Automatic
+
+	column state
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: a272644f-5037-4627-95fe-f69eb1029aab
+		sourceLineageTag: state
+		dataCategory: StateOrProvince
+		summarizeBy: none
+		sourceColumn: state
+
+		changedProperty = DataCategory
+
+		annotation SummarizationSetBy = Automatic
+
+	column loc_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: c616163e-b232-490c-8574-fe3fb417fcde
+		sourceLineageTag: loc_id
+		summarizeBy: none
+		sourceColumn: loc_id
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dimGeodp = entity
+		mode: directLake
+		source
+			entityName: dimGeodp
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

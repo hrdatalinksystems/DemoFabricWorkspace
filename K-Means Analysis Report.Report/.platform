@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "K-Means Analysis Report"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "bc2a2d6e-0c1c-9bdf-423a-861d83a6a0db"
+  }
+}

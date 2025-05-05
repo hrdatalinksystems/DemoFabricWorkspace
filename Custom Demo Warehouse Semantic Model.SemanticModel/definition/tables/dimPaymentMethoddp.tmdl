@@ -1,0 +1,34 @@
+table dimPaymentMethoddp
+	lineageTag: c1376602-0cfa-4f5d-a4c8-d87dbe8af162
+	sourceLineageTag: [dbo].[dimPaymentMethoddp]
+
+	column payment_method_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 600aaf05-6585-4518-8df2-a77059eaeab5
+		sourceLineageTag: payment_method_id
+		summarizeBy: none
+		sourceColumn: payment_method_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column payment_method
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: e06ee930-34a9-4c48-b367-377d69980fea
+		sourceLineageTag: payment_method
+		summarizeBy: none
+		sourceColumn: payment_method
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dimPaymentMethoddp = entity
+		mode: directLake
+		source
+			entityName: dimPaymentMethoddp
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

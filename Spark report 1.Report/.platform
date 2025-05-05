@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Spark report 1"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "4052c22f-e746-bae5-4d0f-bc1d3d939c02"
+  }
+}

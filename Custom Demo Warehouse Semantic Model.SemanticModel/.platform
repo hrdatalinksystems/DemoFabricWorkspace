@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "Custom Demo Warehouse Semantic Model"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "13207aa3-1cf2-a078-4b71-27537a8dedb3"
+  }
+}

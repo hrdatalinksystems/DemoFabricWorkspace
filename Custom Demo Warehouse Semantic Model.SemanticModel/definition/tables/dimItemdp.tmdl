@@ -1,0 +1,64 @@
+table dimItemdp
+	lineageTag: bd502d01-4b2b-4b55-bb17-19495d9ef712
+	sourceLineageTag: [dbo].[dimItemdp]
+
+	column item_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: ef324e0c-e8f2-4f9f-a14d-404ab9459358
+		sourceLineageTag: item_id
+		summarizeBy: none
+		sourceColumn: item_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column category
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 68381ab6-c7cb-48f3-82b9-35350c8a26ff
+		sourceLineageTag: category
+		summarizeBy: none
+		sourceColumn: category
+
+		annotation SummarizationSetBy = Automatic
+
+	column sub_category
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: aa2f1d47-db58-439b-9f17-1e31786b3569
+		sourceLineageTag: sub_category
+		summarizeBy: none
+		sourceColumn: sub_category
+
+		annotation SummarizationSetBy = Automatic
+
+	column sub_sub_category
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: cb263ab3-8765-4d94-b510-410247201d27
+		sourceLineageTag: sub_sub_category
+		summarizeBy: none
+		sourceColumn: sub_sub_category
+
+		annotation SummarizationSetBy = Automatic
+
+	column brand
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 036895c5-08d9-411b-946d-3395b9b68d8a
+		sourceLineageTag: brand
+		summarizeBy: none
+		sourceColumn: brand
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dimItemdp = entity
+		mode: directLake
+		source
+			entityName: dimItemdp
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

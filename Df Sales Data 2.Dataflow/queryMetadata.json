@@ -1,0 +1,63 @@
+{
+  "formatVersion": "202502",
+  "computeEngineSettings": {
+    "allowFastCopy": false
+  },
+  "name": "Df Sales Data 2",
+  "queryGroups": [],
+  "documentLocale": "en-US",
+  "queriesMetadata": {
+    "Item": {
+      "queryId": "2fc01ca5-c096-419b-ab1c-edbbd9710e5c",
+      "queryName": "Item"
+    },
+    "Customer": {
+      "queryId": "a385ba24-dec9-41fe-9bfa-34f3002c15d0",
+      "queryName": "Customer"
+    },
+    "Sales": {
+      "queryId": "ee62d668-5589-4352-a08f-aeb4a82d8c0f",
+      "queryName": "Sales"
+    },
+    "Geography": {
+      "queryId": "4ccf0f40-e728-4d05-bd1a-a58cb4573c68",
+      "queryName": "Geography"
+    },
+    "Item_DataDestination": {
+      "queryId": "d871b413-347f-4478-87bd-e0810c67c912",
+      "queryName": "Item_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "Customer_DataDestination": {
+      "queryId": "4b925325-45cd-4adb-a124-b98763dc7bd5",
+      "queryName": "Customer_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "Sales_DataDestination": {
+      "queryId": "4616e556-9ab8-4356-b5b6-5baa84059865",
+      "queryName": "Sales_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "Geography_DataDestination": {
+      "queryId": "4f33f4b5-8aa6-4a05-88fd-af9f9686c56e",
+      "queryName": "Geography_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    }
+  },
+  "connections": [
+    {
+      "path": "https://github.com/amitchandakpbi/powerbi/raw/refs/heads/main/Sales%20Data%20for%20Fabric.xlsx",
+      "kind": "Web",
+      "connectionId": "{\"ClusterId\":\"28108c40-7992-498a-bfba-85245c35cd41\",\"DatasourceId\":\"890071d3-c9cb-45b1-8ab0-d9eaa429134d\"}"
+    },
+    {
+      "path": "Warehouse",
+      "kind": "Warehouse",
+      "connectionId": "{\"ClusterId\":\"28108c40-7992-498a-bfba-85245c35cd41\",\"DatasourceId\":\"f28702cf-61a2-482a-9900-4155cf435a15\"}"
+    }
+  ]
+}

@@ -1,0 +1,571 @@
+{
+  "properties": {
+    "activities": [
+      {
+        "type": "Copy",
+        "typeProperties": {
+          "source": {
+            "type": "DelimitedTextSource",
+            "formatSettings": {
+              "type": "DelimitedTextReadSettings",
+              "skipLineCount": 0
+            },
+            "storeSettings": {
+              "type": "HttpReadSettings",
+              "requestMethod": "GET"
+            },
+            "datasetSettings": {
+              "type": "DelimitedText",
+              "typeProperties": {
+                "location": {
+                  "type": "HttpServerLocation"
+                },
+                "columnDelimiter": ",",
+                "quoteChar": "\"",
+                "escapeChar": "\\",
+                "firstRowAsHeader": true
+              },
+              "schema": [],
+              "externalReferences": {
+                "connection": "b12debb2-4fac-4df6-a970-16d6f3f8ae10"
+              },
+              "annotations": []
+            }
+          },
+          "sink": {
+            "type": "LakehouseTableSink",
+            "tableActionOption": "OverwriteSchema",
+            "partitionOption": "None",
+            "datasetSettings": {
+              "type": "LakehouseTable",
+              "typeProperties": {
+                "schema": "",
+                "table": "testretaildp"
+              },
+              "schema": [],
+              "linkedService": {
+                "name": "DemoLakehouse",
+                "properties": {
+                  "type": "Lakehouse",
+                  "typeProperties": {
+                    "artifactId": "eca5ea68-98db-973b-4dab-49c6474c4f50",
+                    "workspaceId": "00000000-0000-0000-0000-000000000000",
+                    "rootFolder": "Tables"
+                  },
+                  "annotations": []
+                }
+              },
+              "annotations": []
+            }
+          },
+          "translator": {
+            "type": "TabularTranslator",
+            "mappings": [
+              {
+                "source": {
+                  "name": "order_id",
+                  "type": "String",
+                  "physicalType": "String"
+                },
+                "sink": {
+                  "name": "order_id",
+                  "physicalType": "long"
+                }
+              },
+              {
+                "source": {
+                  "name": "order_date",
+                  "type": "String",
+                  "physicalType": "String"
+                },
+                "sink": {
+                  "name": "order_date",
+                  "physicalType": "date"
+                }
+              },
+              {
+                "source": {
+                  "name": "item_id",
+                  "type": "String",
+                  "physicalType": "String"
+                },
+                "sink": {
+                  "name": "item_id",
+                  "physicalType": "long"
+                }
+              },
+              {
+                "source": {
+                  "name": "category",
+                  "type": "String",
+                  "physicalType": "String"
+                },
+                "sink": {
+                  "name": "category",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "sub_category",
+                  "type": "String",
+                  "physicalType": "String"
+                },
+                "sink": {
+                  "name": "sub_category",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "sub_sub_category",
+                  "type": "String",
+                  "physicalType": "String"
+                },
+                "sink": {
+                  "name": "sub_sub_category",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "brand",
+                  "type": "String",
+                  "physicalType": "String"
+                },
+                "sink": {
+                  "name": "brand",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "unit_price",
+                  "type": "String",
+                  "physicalType": "String"
+                },
+                "sink": {
+                  "name": "unit_price",
+                  "physicalType": "decimal",
+                  "scale": 18,
+                  "precision": 38
+                }
+              },
+              {
+                "source": {
+                  "name": "qty",
+                  "type": "String",
+                  "physicalType": "String"
+                },
+                "sink": {
+                  "name": "qty",
+                  "physicalType": "long"
+                }
+              },
+              {
+                "source": {
+                  "name": "discount_percent",
+                  "type": "String",
+                  "physicalType": "String"
+                },
+                "sink": {
+                  "name": "discount_percent",
+                  "physicalType": "double"
+                }
+              },
+              {
+                "source": {
+                  "name": "unit_cost",
+                  "type": "String",
+                  "physicalType": "String"
+                },
+                "sink": {
+                  "name": "unit_cost",
+                  "physicalType": "double"
+                }
+              },
+              {
+                "source": {
+                  "name": "delivery_date",
+                  "type": "String",
+                  "physicalType": "String"
+                },
+                "sink": {
+                  "name": "delivery_date",
+                  "physicalType": "date"
+                }
+              },
+              {
+                "source": {
+                  "name": "city",
+                  "type": "String",
+                  "physicalType": "String"
+                },
+                "sink": {
+                  "name": "city",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "state",
+                  "type": "String",
+                  "physicalType": "String"
+                },
+                "sink": {
+                  "name": "state",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "loc_id",
+                  "type": "String",
+                  "physicalType": "String"
+                },
+                "sink": {
+                  "name": "loc_id",
+                  "physicalType": "long"
+                }
+              },
+              {
+                "source": {
+                  "name": "order_type",
+                  "type": "String",
+                  "physicalType": "String"
+                },
+                "sink": {
+                  "name": "order_type",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "payment_method",
+                  "type": "String",
+                  "physicalType": "String"
+                },
+                "sink": {
+                  "name": "payment_method",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "customer_id",
+                  "type": "String",
+                  "physicalType": "String"
+                },
+                "sink": {
+                  "name": "customer_id",
+                  "physicalType": "long"
+                }
+              }
+            ],
+            "typeConversion": true,
+            "typeConversionSettings": {
+              "allowDataTruncation": true,
+              "treatBooleanAsNumber": false
+            }
+          },
+          "enableStaging": false
+        },
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "Copy_7ix",
+        "dependsOn": []
+      },
+      {
+        "type": "Copy",
+        "typeProperties": {
+          "source": {
+            "type": "LakehouseTableSource",
+            "datasetSettings": {
+              "type": "LakehouseTable",
+              "typeProperties": {
+                "schema": "dbo",
+                "table": "testretaildp"
+              },
+              "schema": [],
+              "linkedService": {
+                "name": "DemoLakehouse",
+                "properties": {
+                  "type": "Lakehouse",
+                  "typeProperties": {
+                    "artifactId": "eca5ea68-98db-973b-4dab-49c6474c4f50",
+                    "workspaceId": "00000000-0000-0000-0000-000000000000",
+                    "rootFolder": "Tables"
+                  },
+                  "annotations": []
+                }
+              },
+              "annotations": []
+            }
+          },
+          "sink": {
+            "type": "DataWarehouseSink",
+            "tableOption": "autoCreate",
+            "allowCopyCommand": true,
+            "copyCommandSettings": {},
+            "datasetSettings": {
+              "type": "DataWarehouseTable",
+              "typeProperties": {
+                "schema": "dbo",
+                "table": "retaildp"
+              },
+              "schema": [],
+              "linkedService": {
+                "name": "DemoWarehouse",
+                "properties": {
+                  "type": "DataWarehouse",
+                  "typeProperties": {
+                    "artifactId": "b195dbbd-02ff-48ac-a5c1-b2447394f7f3",
+                    "endpoint": "mgqzirnqewmepjgycwfy35nym4-2gze74mowq3ulf3vvduy345jwe.datawarehouse.fabric.microsoft.com",
+                    "workspaceId": "f14fb2d1-b48e-4537-9775-a8e98df3a9b1"
+                  },
+                  "annotations": []
+                }
+              },
+              "annotations": []
+            }
+          },
+          "translator": {
+            "type": "TabularTranslator",
+            "mappings": [
+              {
+                "source": {
+                  "name": "order_id",
+                  "type": "Int64",
+                  "physicalType": "long"
+                },
+                "sink": {
+                  "name": "order_id",
+                  "physicalType": "bigint"
+                }
+              },
+              {
+                "source": {
+                  "name": "order_date",
+                  "type": "Date",
+                  "physicalType": "date"
+                },
+                "sink": {
+                  "name": "order_date",
+                  "physicalType": "date"
+                }
+              },
+              {
+                "source": {
+                  "name": "item_id",
+                  "type": "Int64",
+                  "physicalType": "long"
+                },
+                "sink": {
+                  "name": "item_id",
+                  "physicalType": "bigint"
+                }
+              },
+              {
+                "source": {
+                  "name": "category",
+                  "type": "String",
+                  "physicalType": "string"
+                },
+                "sink": {
+                  "name": "category",
+                  "physicalType": "varchar",
+                  "length": "8000"
+                }
+              },
+              {
+                "source": {
+                  "name": "sub_category",
+                  "type": "String",
+                  "physicalType": "string"
+                },
+                "sink": {
+                  "name": "sub_category",
+                  "physicalType": "varchar",
+                  "length": "8000"
+                }
+              },
+              {
+                "source": {
+                  "name": "sub_sub_category",
+                  "type": "String",
+                  "physicalType": "string"
+                },
+                "sink": {
+                  "name": "sub_sub_category",
+                  "physicalType": "varchar",
+                  "length": "8000"
+                }
+              },
+              {
+                "source": {
+                  "name": "brand",
+                  "type": "String",
+                  "physicalType": "string"
+                },
+                "sink": {
+                  "name": "brand",
+                  "physicalType": "varchar",
+                  "length": "8000"
+                }
+              },
+              {
+                "source": {
+                  "name": "unit_price",
+                  "type": "Decimal",
+                  "physicalType": "decimal"
+                },
+                "sink": {
+                  "name": "unit_price",
+                  "physicalType": "decimal",
+                  "scale": 18,
+                  "precision": 38
+                }
+              },
+              {
+                "source": {
+                  "name": "qty",
+                  "type": "Int64",
+                  "physicalType": "long"
+                },
+                "sink": {
+                  "name": "qty",
+                  "physicalType": "bigint"
+                }
+              },
+              {
+                "source": {
+                  "name": "discount_percent",
+                  "type": "Double",
+                  "physicalType": "double"
+                },
+                "sink": {
+                  "name": "discount_percent",
+                  "physicalType": "float"
+                }
+              },
+              {
+                "source": {
+                  "name": "unit_cost",
+                  "type": "Double",
+                  "physicalType": "double"
+                },
+                "sink": {
+                  "name": "unit_cost",
+                  "physicalType": "float"
+                }
+              },
+              {
+                "source": {
+                  "name": "delivery_date",
+                  "type": "Date",
+                  "physicalType": "date"
+                },
+                "sink": {
+                  "name": "delivery_date",
+                  "physicalType": "date"
+                }
+              },
+              {
+                "source": {
+                  "name": "city",
+                  "type": "String",
+                  "physicalType": "string"
+                },
+                "sink": {
+                  "name": "city",
+                  "physicalType": "varchar",
+                  "length": "8000"
+                }
+              },
+              {
+                "source": {
+                  "name": "state",
+                  "type": "String",
+                  "physicalType": "string"
+                },
+                "sink": {
+                  "name": "state",
+                  "physicalType": "varchar",
+                  "length": "8000"
+                }
+              },
+              {
+                "source": {
+                  "name": "loc_id",
+                  "type": "Int64",
+                  "physicalType": "long"
+                },
+                "sink": {
+                  "name": "loc_id",
+                  "physicalType": "bigint"
+                }
+              },
+              {
+                "source": {
+                  "name": "order_type",
+                  "type": "String",
+                  "physicalType": "string"
+                },
+                "sink": {
+                  "name": "order_type",
+                  "physicalType": "varchar",
+                  "length": "8000"
+                }
+              },
+              {
+                "source": {
+                  "name": "payment_method",
+                  "type": "String",
+                  "physicalType": "string"
+                },
+                "sink": {
+                  "name": "payment_method",
+                  "physicalType": "varchar",
+                  "length": "8000"
+                }
+              },
+              {
+                "source": {
+                  "name": "customer_id",
+                  "type": "Int64",
+                  "physicalType": "long"
+                },
+                "sink": {
+                  "name": "customer_id",
+                  "physicalType": "bigint"
+                }
+              }
+            ]
+          },
+          "enableStaging": true
+        },
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "Copy_145",
+        "dependsOn": [
+          {
+            "activity": "Copy_7ix",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

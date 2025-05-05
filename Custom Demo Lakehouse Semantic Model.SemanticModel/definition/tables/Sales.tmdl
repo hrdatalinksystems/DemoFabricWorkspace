@@ -1,0 +1,173 @@
+table Sales
+	lineageTag: f3d3432d-fec7-47c1-999c-66d0add0ee12
+	sourceLineageTag: [dbo].[Sales]
+
+	measure Gross = SUM(Sales[GrossAmount])
+		lineageTag: 795fb6fb-39ee-43a8-ba8a-3a77d2e0a4cf
+
+		changedProperty = Name
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure Discount = SUM(Sales[DiscountAmount])
+		lineageTag: 9a833f86-bddc-4848-bf9f-b4ee863059ab
+
+		changedProperty = Name
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column OrderNo
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: fa650e12-0c6a-4d4f-ae48-aef26850ccee
+		sourceLineageTag: OrderNo
+		summarizeBy: sum
+		sourceColumn: OrderNo
+
+		annotation SummarizationSetBy = Automatic
+
+	column ItemID
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: e4a582dc-076c-4f6a-9638-647179298cbb
+		sourceLineageTag: ItemID
+		summarizeBy: none
+		sourceColumn: ItemID
+
+		annotation SummarizationSetBy = Automatic
+
+	column SalesDate
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 84ba3420-45c2-4ceb-b67a-40a39d6fbd1b
+		sourceLineageTag: SalesDate
+		summarizeBy: none
+		sourceColumn: SalesDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column DeilveryDate
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 6d759707-7fbd-49f7-b75a-839835a57072
+		sourceLineageTag: DeilveryDate
+		summarizeBy: none
+		sourceColumn: DeilveryDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column CustomerId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 966753e2-78ec-4f86-aaa4-ea36ac1cd57d
+		sourceLineageTag: CustomerId
+		summarizeBy: none
+		sourceColumn: CustomerId
+
+		annotation SummarizationSetBy = Automatic
+
+	column CityId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 64a38bfa-5ce8-46d0-904b-b5075f8d430e
+		sourceLineageTag: CityId
+		summarizeBy: none
+		sourceColumn: CityId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Qty
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 0695829e-6db6-476e-a0b7-1a648ab2bbbe
+		sourceLineageTag: Qty
+		summarizeBy: sum
+		sourceColumn: Qty
+
+		annotation SummarizationSetBy = Automatic
+
+	column Price
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: adbb2850-f35c-4676-aec0-6c67558b4def
+		sourceLineageTag: Price
+		summarizeBy: sum
+		sourceColumn: Price
+
+		annotation SummarizationSetBy = Automatic
+
+	column cost
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: f61b5297-ff55-4c1c-82de-1ff0b9df9209
+		sourceLineageTag: cost
+		summarizeBy: sum
+		sourceColumn: cost
+
+		annotation SummarizationSetBy = Automatic
+
+	column DiscountPercent
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: dff923cc-9e98-4002-9191-386d540b7620
+		sourceLineageTag: DiscountPercent
+		summarizeBy: sum
+		sourceColumn: DiscountPercent
+
+		annotation SummarizationSetBy = Automatic
+
+	column GrossAmount
+		dataType: double
+		sourceProviderType: float
+		lineageTag: c7a1bc62-ee7b-426c-8e17-72425834e4f6
+		sourceLineageTag: GrossAmount
+		summarizeBy: sum
+		sourceColumn: GrossAmount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column COGSAmount
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 52ea4c7a-d8f1-4b9d-84e4-4420547917cb
+		sourceLineageTag: COGSAmount
+		summarizeBy: sum
+		sourceColumn: COGSAmount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column DiscountAmount
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 464a6f8c-168a-42e5-879d-83a9d46a0058
+		sourceLineageTag: DiscountAmount
+		summarizeBy: sum
+		sourceColumn: DiscountAmount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition Sales = entity
+		mode: directLake
+		source
+			entityName: Sales
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

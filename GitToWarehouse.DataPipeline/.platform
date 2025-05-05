@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "DataPipeline",
+    "displayName": "GitToWarehouse"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "c9c0771b-4839-90fb-49b9-85c97e758580"
+  }
+}

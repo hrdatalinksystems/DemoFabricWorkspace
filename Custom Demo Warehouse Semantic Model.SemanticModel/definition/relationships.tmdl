@@ -1,0 +1,28 @@
+relationship 58645728-0307-bdc0-6236-51a08ffc24f9
+	fromColumn: Sales.ItemID
+	toColumn: Item.ItemId
+
+relationship 8d330cf2-616e-b4df-435c-7e7f0904f87d
+	fromColumn: Sales.CityId
+	toColumn: Geography.CityId
+
+relationship 0b29e579-2dfb-8c35-bb59-e0df9af6730c
+	fromColumn: Sales.CustomerId
+	toColumn: Customer.CustomerId
+
+relationship 4eb74385-8543-6cc5-b55b-f0e87dd27d98
+	fromColumn: factRetailsdp.item_id
+	toColumn: dimItemdp.item_id
+
+relationship b175fbef-b165-2a26-c263-13ee9eb66a07
+	fromColumn: factRetailsdp.payment_method_id
+	toColumn: dimPaymentMethoddp.payment_method_id
+
+relationship 69de62f3-9164-fdd1-d03c-39d9b196a23c
+	fromColumn: factRetailsdp.loc_id
+	toColumn: dimGeodp.loc_id
+
+relationship cf689e29-083a-4c92-1e9c-93c1b772d63f
+	fromColumn: dimGeodp.city
+	toColumn: Geography.City
+

@@ -1,0 +1,12 @@
+relationship 4c12570c-d2a3-fc79-2fe2-4996537f9252
+	fromColumn: Sales.CityId
+	toColumn: Geography.CityId
+
+relationship 8fe3d067-3f53-212f-3ee1-9a03bfe777b6
+	fromColumn: Sales.CustomerId
+	toColumn: Customer.CustomerId
+
+relationship 5084fd92-8239-a861-7faf-8395bfc52484
+	fromColumn: Sales.ItemID
+	toColumn: Item.ItemId
+

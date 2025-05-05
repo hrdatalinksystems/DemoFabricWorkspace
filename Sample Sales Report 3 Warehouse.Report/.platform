@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Sample Sales Report 3 Warehouse"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "7f942314-9f02-bdd8-4e56-3c41bf4cb145"
+  }
+}

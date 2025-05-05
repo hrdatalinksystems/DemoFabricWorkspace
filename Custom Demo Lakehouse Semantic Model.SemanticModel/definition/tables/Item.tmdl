@@ -1,0 +1,97 @@
+table Item
+	lineageTag: 4063983f-2863-4566-b087-7966fffee356
+	sourceLineageTag: [dbo].[Item]
+
+	column ItemId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: df065d64-23e6-4d9a-85f1-81df2b6872d2
+		sourceLineageTag: ItemId
+		summarizeBy: none
+		sourceColumn: ItemId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Name
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 90dba930-c798-4e45-a428-a6687f69112b
+		sourceLineageTag: Name
+		summarizeBy: none
+		sourceColumn: Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column BrandId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 2ec8a068-0d80-4b24-9351-fc71328d8baa
+		sourceLineageTag: BrandId
+		summarizeBy: none
+		sourceColumn: BrandId
+
+		annotation SummarizationSetBy = Automatic
+
+	column CategoryId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: c62c1b6c-2a7b-47b6-9cde-363a48172a70
+		sourceLineageTag: CategoryId
+		summarizeBy: none
+		sourceColumn: CategoryId
+
+		annotation SummarizationSetBy = Automatic
+
+	column SubCategoryId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 0cf31150-fd27-4083-9978-27ea0f5ede76
+		sourceLineageTag: SubCategoryId
+		summarizeBy: none
+		sourceColumn: SubCategoryId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Brand
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: ef83128b-7b2b-47a4-a383-572266c6c931
+		sourceLineageTag: Brand
+		summarizeBy: none
+		sourceColumn: Brand
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 3c483226-ded4-4a9e-bfde-290aa63a1613
+		sourceLineageTag: Category
+		summarizeBy: none
+		sourceColumn: Category
+
+		annotation SummarizationSetBy = Automatic
+
+	column SubCategory
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 3a5d2129-bc8b-4041-982f-136955692637
+		sourceLineageTag: SubCategory
+		summarizeBy: none
+		sourceColumn: SubCategory
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Item = entity
+		mode: directLake
+		source
+			entityName: Item
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

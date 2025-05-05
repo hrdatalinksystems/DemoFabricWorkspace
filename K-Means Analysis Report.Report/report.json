@@ -1,0 +1,42 @@
+{
+  "config": "{\"version\":\"5.59\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY24SU10\",\"version\":\"5.62\",\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"useEnhancedTooltips\":true,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY24SU10",
+            "path": "BaseThemes/CY24SU10.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "Page 1",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "c17d259100a72a218d06",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"99c7295d4a4787eaa533\",\"layouts\":[{\"id\":0,\"position\":{\"x\":260.1140487299119,\"y\":145.31881804043545,\"z\":0,\"width\":502.9756350440643,\"height\":280.68429237947123,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"Sum(retail_club6_tab.cluster)\"},{\"queryRef\":\"Sum(retail_club6_tab.cluster)1\"},{\"queryRef\":\"Sum(retail_club6_tab.qty)\"},{\"queryRef\":\"Sum(retail_club6_tab.Gross)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"r\",\"Entity\":\"retail_club6_tab\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"r\"}},\"Property\":\"cluster\"},\"Name\":\"Sum(retail_club6_tab.cluster)\",\"NativeReferenceName\":\"cluster\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"r\"}},\"Property\":\"cluster\"}},\"Function\":5},\"Name\":\"Sum(retail_club6_tab.cluster)1\",\"NativeReferenceName\":\"Count of cluster\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"r\"}},\"Property\":\"qty\"}},\"Function\":0},\"Name\":\"Sum(retail_club6_tab.qty)\",\"NativeReferenceName\":\"Sum of qty\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"r\"}},\"Property\":\"Gross\"}},\"Function\":0},\"Name\":\"Sum(retail_club6_tab.Gross)\",\"NativeReferenceName\":\"Sum of Gross\"}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 280.68,
+          "width": 502.98,
+          "x": 260.11,
+          "y": 145.32,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}

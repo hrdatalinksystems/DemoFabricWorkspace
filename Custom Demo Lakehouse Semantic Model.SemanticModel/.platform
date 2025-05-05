@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "Custom Demo Lakehouse Semantic Model"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "ca428567-8d66-830d-4da6-cace64b2e384"
+  }
+}
